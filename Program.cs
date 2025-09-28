@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using PruebaTecnica.Data;
 using Microsoft.EntityFrameworkCore;
 using PruebaTecnica.Forms;
+using PruebaTecnica.Data.Repositories;
+using PruebaTecnica.Services;
+using PruebaTecnica.Interfaces;
 
 
 namespace PruebaTecnica
@@ -27,21 +30,27 @@ namespace PruebaTecnica
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+            // Registros con interfaces
+            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
+
+            // Formularios
             services.AddTransient<FormCompanyList>();
+            services.AddTransient<FormCompanyEditor>();
 
             var provider = services.BuildServiceProvider();
 
-            // Ejecutar migraciones al arrancar
+            // Migraciones al arranque
             using (var scope = provider.CreateScope())
             {
-                var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-                context.Database.Migrate();
+                var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                db.Database.Migrate();
             }
 
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormCompanyList());
+            Application.Run(provider.GetRequiredService<FormCompanyList>());
         }
     }
 }
