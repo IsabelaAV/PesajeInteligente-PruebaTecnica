@@ -18,19 +18,7 @@ namespace PruebaTecnica.Services
             _repository = repository;
         }
 
-        public List<Empresa> ObtenerTodas()
-        {
-            //try
-            //{
-
-            //    return _repository.GetAll();
-            //}
-            //catch (Exception err)
-            //{
-            //    return new List<Empresa>();
-            //}
-            return _repository.GetAll();
-        }
+        public List<Empresa> ObtenerTodas() => _repository.GetAll();
         public Empresa? ObtenerPorId(int id) => _repository.GetById(id);
         public void Crear(Empresa empresa) => _repository.Add(empresa);
         public void Actualizar(Empresa empresa) => _repository.Update(empresa);

@@ -61,6 +61,12 @@ namespace PruebaTecnica.Forms
                 return;
             }
 
+            if (!int.TryParse(txtTelefono.Text, out _))
+            {
+                MessageBox.Show("El teléfono debe ser un número válido.");
+                return;
+            }
+
             _empresa.Nombre = txtNombre.Text;
             _empresa.Codigo = int.Parse(txtCodigo.Text);
             _empresa.Direccion = txtDireccion.Text;

@@ -49,31 +49,44 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(371, 28);
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Margin = new Padding(3, 10, 3, 0);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(50, 20);
+            lblTitulo.Size = new Size(800, 53);
             lblTitulo.TabIndex = 0;
             lblTitulo.Text = "label1";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = SystemColors.ControlLightLight;
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.Red;
             btnCancelar.Location = new Point(230, 392);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGuardar
             // 
+            btnGuardar.BackColor = SystemColors.ControlLightLight;
+            btnGuardar.Cursor = Cursors.Hand;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.ForestGreen;
             btnGuardar.Location = new Point(464, 392);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(94, 29);
             btnGuardar.TabIndex = 2;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // txtNombre
@@ -210,7 +223,9 @@
             Controls.Add(btnGuardar);
             Controls.Add(btnCancelar);
             Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "FormCompanyEditor";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormCompanyEditor";
             ResumeLayout(false);
             PerformLayout();
