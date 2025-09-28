@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PruebaTecnica.Interfaces;
 using PruebaTecnica.Models;
-using PruebaTecnica.Services;
+using PruebaTecnica.Services.Impl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

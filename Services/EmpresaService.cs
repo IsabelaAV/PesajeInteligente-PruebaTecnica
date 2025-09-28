@@ -1,6 +1,7 @@
 ﻿using PruebaTecnica.Data.Repositories;
-using PruebaTecnica.Interfaces;
+using PruebaTecnica.Data.Repositories.Impl;
 using PruebaTecnica.Models;
+using PruebaTecnica.Services.Impl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
