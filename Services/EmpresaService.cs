@@ -19,10 +19,61 @@ namespace PruebaTecnica.Services
             _repository = repository;
         }
 
-        public List<Empresa> ObtenerTodas() => _repository.GetAll();
-        public Empresa? ObtenerPorId(int id) => _repository.GetById(id);
-        public void Crear(Empresa empresa) => _repository.Add(empresa);
-        public void Actualizar(Empresa empresa) => _repository.Update(empresa);
-        public void Eliminar(int id) => _repository.Delete(id);
+        public List<Empresa> ObtenerTodas()
+        {
+            try
+            {
+                return _repository.GetAll();
+            }catch (Exception ex)
+            {
+                throw new Exception("Error al obtener las empresas: " + ex.Message);
+            }
+        }
+        public Empresa? ObtenerPorId(int id)
+        {
+            try
+            {
+                return _repository.GetById(id);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener la empresa: " + ex.Message);
+            }
+        }
+        public void Crear(Empresa empresa)
+        {
+            try
+            {
+                _repository.Add(empresa);
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al crear la empresa: " + ex.Message);
+            }
+        }
+        public void Actualizar(Empresa empresa)
+        {
+            try
+            {
+                _repository.Update(empresa);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al actualizar la empresa: " + ex.Message);
+            }
+        }
+        public void Eliminar(int id)
+        {
+            try
+            {
+                _repository.Delete(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al eliminar la empresa: " + ex.Message);
+            }
+        }
     }
 }

@@ -1,10 +1,5 @@
 ﻿using PruebaTecnica.Data.Repositories.Impl;
 using PruebaTecnica.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PruebaTecnica.Data.Repositories
 {
