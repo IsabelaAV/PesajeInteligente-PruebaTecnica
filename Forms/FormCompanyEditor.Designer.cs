@@ -36,9 +36,9 @@
             lblCodigo = new Label();
             txtCodigo = new TextBox();
             lblDireccion = new Label();
-            textBox1 = new TextBox();
+            txtDireccion = new TextBox();
             lblCiudad = new Label();
-            textBox2 = new TextBox();
+            txtCiudad = new TextBox();
             lblTelefono = new Label();
             txtTelefono = new TextBox();
             lblPais = new Label();
@@ -50,7 +50,7 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
-            lblTitulo.Location = new Point(341, 15);
+            lblTitulo.Location = new Point(371, 28);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(50, 20);
             lblTitulo.TabIndex = 0;
@@ -64,6 +64,7 @@
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnGuardar
             // 
@@ -73,6 +74,7 @@
             btnGuardar.TabIndex = 2;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // txtNombre
             // 
@@ -115,12 +117,12 @@
             lblDireccion.TabIndex = 8;
             lblDireccion.Text = "Dirección";
             // 
-            // textBox1
+            // txtDireccion
             // 
-            textBox1.Location = new Point(40, 176);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(718, 27);
-            textBox1.TabIndex = 7;
+            txtDireccion.Location = new Point(40, 176);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.Size = new Size(718, 27);
+            txtDireccion.TabIndex = 7;
             // 
             // lblCiudad
             // 
@@ -131,12 +133,12 @@
             lblCiudad.TabIndex = 12;
             lblCiudad.Text = "Ciudad";
             // 
-            // textBox2
+            // txtCiudad
             // 
-            textBox2.Location = new Point(417, 252);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(341, 27);
-            textBox2.TabIndex = 11;
+            txtCiudad.Location = new Point(417, 252);
+            txtCiudad.Name = "txtCiudad";
+            txtCiudad.Size = new Size(341, 27);
+            txtCiudad.TabIndex = 11;
             // 
             // lblTelefono
             // 
@@ -196,11 +198,11 @@
             Controls.Add(lblDepartamento);
             Controls.Add(txtDepartamento);
             Controls.Add(lblCiudad);
-            Controls.Add(textBox2);
+            Controls.Add(txtCiudad);
             Controls.Add(lblTelefono);
             Controls.Add(txtTelefono);
             Controls.Add(lblDireccion);
-            Controls.Add(textBox1);
+            Controls.Add(txtDireccion);
             Controls.Add(lblCodigo);
             Controls.Add(txtCodigo);
             Controls.Add(lblNombre);
@@ -224,9 +226,9 @@
         private Label lblCodigo;
         private TextBox txtCodigo;
         private Label lblDireccion;
-        private TextBox textBox1;
+        private TextBox txtDireccion;
         private Label lblCiudad;
-        private TextBox textBox2;
+        private TextBox txtCiudad;
         private Label lblTelefono;
         private TextBox txtTelefono;
         private Label lblPais;

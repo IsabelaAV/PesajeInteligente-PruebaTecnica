@@ -154,7 +154,7 @@
             btnAnadir.TabIndex = 1;
             btnAnadir.Text = "Añadir";
             btnAnadir.UseVisualStyleBackColor = true;
-            btnAnadir.Click += btnCrear_Click;
+            btnAnadir.Click += btnAnadir_Click;
             // 
             // label1
             // 
@@ -164,7 +164,6 @@
             label1.Size = new Size(127, 20);
             label1.TabIndex = 2;
             label1.Text = "Lista de empresas";
-            label1.Click += label1_Click;
             // 
             // btnEditar
             // 
@@ -174,6 +173,7 @@
             btnEditar.TabIndex = 3;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnEliminar
             // 
@@ -183,6 +183,7 @@
             btnEliminar.TabIndex = 4;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // txtFiltrar
             // 
