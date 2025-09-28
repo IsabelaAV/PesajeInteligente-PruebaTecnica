@@ -2,6 +2,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PruebaTecnica.Data;
 using Microsoft.EntityFrameworkCore;
+using PruebaTecnica.Forms;
 
 
 namespace PruebaTecnica
@@ -26,7 +27,7 @@ namespace PruebaTecnica
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<Form1>();
+            services.AddTransient<FormCompanyList>();
 
             var provider = services.BuildServiceProvider();
 
@@ -40,7 +41,7 @@ namespace PruebaTecnica
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new FormCompanyList());
         }
     }
 }
