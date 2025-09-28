@@ -5,7 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using PruebaTecnica.Forms;
 using PruebaTecnica.Data.Repositories;
 using PruebaTecnica.Services;
-using PruebaTecnica.Interfaces;
+using PruebaTecnica.Data.Repositories.Impl;
+using PruebaTecnica.Services.Impl;
 
 
 namespace PruebaTecnica

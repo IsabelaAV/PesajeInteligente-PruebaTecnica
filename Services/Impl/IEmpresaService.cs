@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PruebaTecnica.Interfaces
+namespace PruebaTecnica.Services.Impl
 {
     public interface IEmpresaService
     {

@@ -1,4 +1,4 @@
-﻿using PruebaTecnica.Interfaces;
+﻿using PruebaTecnica.Data.Repositories.Impl;
 using PruebaTecnica.Models;
 using System;
 using System.Collections.Generic;
